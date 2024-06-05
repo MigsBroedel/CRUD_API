@@ -1,0 +1,48 @@
+.container {
+        --list-width: 450;
+        --list-height: 45;
+        background-color: #31363F;
+        width: 450px;
+        height: 45px;
+        border: 2px;
+        border-radius: 5px;
+        text-align:left;
+}
+
+.checkbox {
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    height: var(--list-height + 20);
+    width: var(--list-width);
+    font-size: 6px;
+    display: inline-block;
+    outline: 0;
+    border: 1;
+    background-color: #31363F;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    line-height: 26px;
+}
+
+.divgeral {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center; 
+    padding-right: 40px;
+    padding-left: 30px;
+    margin-top: 45px;
+    border: 2px #000;
+    border-radius: 3px;
+    margin-left: 470px;
+}
+
+.nome {
+    color: aliceblue;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
