@@ -1,0 +1,62 @@
+ordem de criação
+memoria e roms f
+ler e separar memoria e opcode f
+interpretar opcodes 
+desenhar na tela
+
+proximo passo: Verificar funcionamento dos op_codes e fazer revisões, ainda há algo de errado pois nada é mostrado na tela
+
+definir que V, ou registradores, serao um arr, não variaveis separadas
+draw, criar um mapa, buffer, que o pg leia e crie a tela, a partir disso, é so pegar os bytes e dar xor nesse mapa, assim os 1 viram 0 e os 0 viram 1
+
+função de atualizar buffer (x, y, value)
+      buffer[y][x] = value
+ 
+função de desenhar
+      se pix = 1
+            cor = preto
+            atualizar buffer
+            draw
+      se pix = 0
+            cor = branco
+            atualizar buffer
+            draw
+flip no main
+
+
+conseguir captar op code e deixar no jeito pra interpretar
+
+            00E0 - CLS - FEITO
+            00EE - RET - FEITO
+            1nnn - JP addr - FEITO
+            2nnn - CALL addr - FEITO
+            3xkk - SE Vx, byte - FEITO
+            4xkk - SNE Vx, byte - FEITO
+            5xy0 - SE Vx, Vy - FEITO
+            6xkk - LD Vx, byte - FEITO
+            7xkk - ADD Vx, byte - FEITO
+            8xy0 - LD Vx, Vy - FEITO 
+            8xy1 - OR Vx, Vy - FEITO
+            8xy2 - AND Vx, Vy - FEITO
+            8xy3 - XOR Vx, Vy - FEITO
+            8xy4 - ADD Vx, Vy - FEITO
+            8xy5 - SUB Vx, Vy - FEITO
+            8xy6 - SHR Vx {, Vy} - FEITO
+            8xy7 - SUBN Vx, Vy - FEITO
+            8xyE - SHL Vx {, Vy} - FEITO
+            9xy0 - SNE Vx, Vy - FEITO
+            Annn - LD I, addr - FEITO
+            Bnnn - JP V0, addr - FEITO
+            Cxkk - RND Vx, byte - FEITO
+            Dxyn - DRW Vx, Vy, nibble ############
+            Ex9E - SKP Vx - FEITO
+            ExA1 - SKNP Vx - FEITO
+            Fx07 - LD Vx, DT - FEITO
+            Fx0A - LD Vx, K - FEITO 
+            Fx15 - LD DT, Vx- FEITO
+            Fx18 - LD ST, Vx - FEITO 
+            Fx1E - ADD I, Vx - FEITO
+            Fx29 - LD F, Vx  ####################
+            Fx33 - LD B, Vx - FEITO
+            Fx55 - LD [I], Vx - FEITO
+            Fx65 - LD Vx, [I] - FEITO
